@@ -104,8 +104,12 @@ function remove_books(){
 }
 function addDate(){
     books.forEach((item) => {
-        let date = prompt("Enter the published date for the book " + item.title);
-        item["date"] = date;
+        if(item.date){
+            return;
+        }else{
+            let date = prompt("Enter the published date for the book " + item.title);
+            item["date"] = date;
+        }       
     })
     console.log(books);
 }
