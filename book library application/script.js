@@ -70,9 +70,8 @@ let books = [ {
 }]
 
 function pages(){
-    let minbooks = books.filter((value) => (value.pages<200));
-    let sortedminbooks = minbooks.sort((a,b) => { return a.title.localeCompare(b.title); });
-    console.log(sortedminbooks);
+    let minbooks = books.filter((value) => (value.pages<200)).sort((a,b) => ( a.title.localeCompare(b.title) ));
+    console.log(minbooks);
 }
 function search(){
     let str = prompt("Enter the string you want to search: ");
